@@ -12,18 +12,18 @@
 		B68901EF265B7A7100A08469 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B68901EE265B7A7100A08469 /* Assets.xcassets */; };
 		B68901F2265B7A7100A08469 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B68901F0265B7A7100A08469 /* Main.storyboard */; };
 		B68901FF265B7B1700A08469 /* WeChat.m in Sources */ = {isa = PBXBuildFile; fileRef = B68901FE265B7B1700A08469 /* WeChat.m */; };
-		B6AFA2D82660D7CD001ED41E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68901FA265B7AD200A08469 /* opencv2.framework */; };
-		B6AFA2D92660D7CD001ED41E /* opencv2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B68901FA265B7AD200A08469 /* opencv2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B6AFA2F12660E6D7001ED41E /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68901FA265B7AD200A08469 /* opencv2.framework */; };
+		B6AFA2F22660E6D7001ED41E /* opencv2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B68901FA265B7AD200A08469 /* opencv2.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B6AFA2DA2660D7CD001ED41E /* Embed Frameworks */ = {
+		B6AFA2F32660E6D7001ED41E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B6AFA2D92660D7CD001ED41E /* opencv2.framework in Embed Frameworks */,
+				B6AFA2F22660E6D7001ED41E /* opencv2.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6AFA2D82660D7CD001ED41E /* opencv2.framework in Frameworks */,
+				B6AFA2F12660E6D7001ED41E /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +61,7 @@
 			children = (
 				B68901E9265B7A6E00A08469 /* QRCode */,
 				B68901E8265B7A6E00A08469 /* Products */,
+				B6AFA2E42660E3D6001ED41E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +90,13 @@
 			path = QRCode;
 			sourceTree = "<group>";
 		};
+		B6AFA2E42660E3D6001ED41E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,7 +107,7 @@
 				B68901E3265B7A6E00A08469 /* Sources */,
 				B68901E4265B7A6E00A08469 /* Frameworks */,
 				B68901E5265B7A6E00A08469 /* Resources */,
-				B6AFA2DA2660D7CD001ED41E /* Embed Frameworks */,
+				B6AFA2F32660E6D7001ED41E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

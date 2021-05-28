@@ -11,6 +11,28 @@
 
 
 @implementation WeChat
++ (BOOL)canRecordScreen {
+    if (@available(macOS 10.15, *)) {
+        CFArrayRef windowList = CGWindowListCopyWindowInfo(kCGWindowListOptionOnScreenOnly, kCGNullWindowID);
+        NSUInteger numberOfWindows = CFArrayGetCount(windowList);
+        NSUInteger numberOfWindowsWithName = 0;
+        for (int idx = 0; idx < numberOfWindows; idx++) {
+            NSDictionary *windowInfo = (NSDictionary *)CFArrayGetValueAtIndex(windowList, idx);
+            NSString *windowName = windowInfo[(id)kCGWindowName];
+            if (windowName) {
+                numberOfWindowsWithName++;
+            } else {
+                //no kCGWindowName detected -> not enabled
+                break; //breaking early, numberOfWindowsWithName not increased
+            }
+
+        }
+        CFRelease(windowList);
+        return numberOfWindows == numberOfWindowsWithName;
+    }
+    return YES;
+}
+
 + (void)showScreenRecordingPrompt {
   
   /* macos 10.14 and lower do not require screen recording permission to get window titles */
